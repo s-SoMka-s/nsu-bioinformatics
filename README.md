@@ -68,4 +68,4 @@ ls -1 hello*
 cat hello.out.txt.world.out.txt
 ```
 
-В результате получаем [файл](/part2/hello.out.txt) и [фаил](/part2/hello.out.world.out.txt), а также сопровождающий файл логов .audit.json для каждого из этих файлов. [например](/part2/hello.out.txt.world.out.txt.audit.json)
+В результате получаем [файл](/part2/hello.out.txt) и [фаил](/part2/hello.out.txt.world.out.txt), а также сопровождающий файл логов .audit.json для каждого из этих файлов. [например](/part2/hello.out.txt.world.out.txt.audit.json)
