@@ -69,3 +69,12 @@ cat hello.out.txt.world.out.txt
 ```
 
 В результате получаем [файл](/part2/hello.out.txt) и [фаил](/part2/hello.out.txt.world.out.txt), а также сопровождающий файл логов .audit.json для каждого из этих файлов. [например](/part2/hello.out.txt.world.out.txt.audit.json)
+
+# Часть 3
+
+1. В директории part3/ выполнить 'go run pipeline.go'
+2. [Код](/part3/pipline.go) пайплайна на SciPipe
+3. Все сгенерированные файлы в ходе работы пайплайна по умолчанию кладутся в папку output [пример](/part3/output/)
+4. В результате в [файл](/part3/output/parsed.txt)выводится результат "OK" или "Not OK"
+5. Лог файлы каждого запуска хранятся в [логи](/part3/logs/)
+6. Визуализация пайплайна в виде графического файла:
