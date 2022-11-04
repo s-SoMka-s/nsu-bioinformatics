@@ -1,0 +1,2 @@
+@SQ	SN:NC_000913.3	LN:4641652
+@PG	ID:minimap2	PN:minimap2	VN:2.17-r941	CL:minimap2 -a ../ref.mmi ./input/e_coli_fastq.gz

@@ -1,0 +1,27 @@
+{
+    "ID": "i5ih21kg4cfahbm7ifon",
+    "ProcessName": "alignment",
+    "Command": "minimap2 -a ../ref.mmi ./input/e_coli_fastq.gz \u003e ./output/alignment.sam",
+    "Params": {},
+    "Tags": {},
+    "StartTime": "2022-11-04T13:25:15.7594284+07:00",
+    "FinishTime": "2022-11-04T13:25:15.8291733+07:00",
+    "ExecTimeNS": 69744900,
+    "OutFiles": {
+        "ares": "./output/alignment.sam"
+    },
+    "Upstream": {
+        "ref.mmi": {
+            "ID": "u4sbey13fdlf7ibbr68o",
+            "ProcessName": "",
+            "Command": "",
+            "Params": {},
+            "Tags": {},
+            "StartTime": "0001-01-01T00:00:00Z",
+            "FinishTime": "0001-01-01T00:00:00Z",
+            "ExecTimeNS": -1,
+            "OutFiles": {},
+            "Upstream": {}
+        }
+    }
+}
