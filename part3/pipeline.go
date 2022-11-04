@@ -36,6 +36,9 @@ func main() {
 	view := wf.NewProc("view", "echo {i:parsed} > {o:out}")
 	view.In("parsed").From(parse.Out("parsed"))
 
+	wf.PlotGraph("my_workflow_graph.dot")
+	wf.PlotGraphPDF("my_workflow_graph.dot")
+
 	// Run workflow
 	wf.Run()
 }

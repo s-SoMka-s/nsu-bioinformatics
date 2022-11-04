@@ -1,0 +1,23 @@
+digraph "workflow" {
+  rankdir=LR;
+  graph [fontname="Arial",fontsize=13,color="#384A52",fontcolor="#384A52"];
+  node  [fontname="Arial",fontsize=11,color="#384A52",fontcolor="#384A52",fillcolor="#EFF2F5",shape=box,style=filled];
+  edge  [fontname="Arial",fontsize=9, color="#384A52",fontcolor="#384A52"];
+  "alignment" [shape=box];
+  "fastqc" [shape=box];
+  "in_parser" [shape=box];
+  "in_ref" [shape=box];
+  "in_source" [shape=box];
+  "index" [shape=box];
+  "parse" [shape=box];
+  "samtools" [shape=box];
+  "view" [shape=box];
+  "alignment" -> "samtools" [taillabel="ares", headlabel="ares"];
+  "in_parser" -> "parse" [taillabel="out", headlabel="in_parser"];
+  "in_ref" -> "index" [taillabel="out", headlabel="in_ref"];
+  "in_source" -> "fastqc" [taillabel="out", headlabel="in_source"];
+  "in_source" -> "alignment" [taillabel="out", headlabel="in_source"];
+  "index" -> "alignment" [taillabel="ref", headlabel="ref"];
+  "parse" -> "view" [taillabel="parsed", headlabel="parsed"];
+  "samtools" -> "parse" [taillabel="sres", headlabel="sres"];
+}
