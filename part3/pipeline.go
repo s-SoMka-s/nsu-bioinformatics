@@ -16,9 +16,8 @@ func main() {
 	index.In("in_ref").From(src_ref.Out())
 	index.SetOut("ref", "output/ref.mmi")
 
-	//fastqc := wf.NewProc("fastqc", "fastqc {i:in_source} > {o:fres}")
-	//fastqc.SetOut("fres", "./output/e_coli_fastq_fastqc.html")
-	//fastqc.In("in_source").From(src_source.Out())
+	fastqc := wf.NewProc("fastqc", "fastqc {i:in_source}")
+	fastqc.In("in_source").From(src_source.Out())
 
 	alignment := wf.NewProc("alignment", "minimap2 -a {i:ref} {i:in_source} > {o:ares}")
 	alignment.In("ref").From(index.Out("ref"))
@@ -33,6 +32,9 @@ func main() {
 	parse.In("in_parser").From(src_parser.Out())
 	parse.In("sres").From(samtools.Out("sres"))
 	parse.SetOut("parsed", "output/parsed.txt")
+
+	view := wf.NewProc("view", "echo {i:parsed} > {o:out}")
+	view.In("parsed").From(parse.Out("parsed"))
 
 	// Run workflow
 	wf.Run()

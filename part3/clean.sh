@@ -1,1 +1,1 @@
-rm -rf ./*.txt* ./*.tmp*
+rm -f -r output
